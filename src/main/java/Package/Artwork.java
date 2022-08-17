@@ -48,7 +48,7 @@ public String Artwork(String title, String artist, double price, int nft) {
     this.nft = nft;
     }
 
-
+public void acceptPayment(int payment) { price += payment;}
 
 
 
