@@ -1,16 +1,18 @@
 package Package;
 
+import java.util.ArrayList;
+
 public class Gallery {
 
+    private ArrayList<Artwork> artwork;
     double till;
     String galleryName;
-    String artCollection;
 
 
-    public Gallery(double till, String galleryName, String artCollection){
-        this.till = till;
+    public Gallery(double till, String galleryName){
+        this.till = 0;
         this.galleryName = galleryName;
-        this.artCollection = artCollection;
+        this.artwork = new ArrayList<Artwork>();
     }
 
     public double gettill(){
@@ -29,14 +31,23 @@ public class Gallery {
     this.galleryName = galleryName;
     }
 
-    public String getArtCollection(){
-    return artCollection;
-    }
+//    public  getArtCollection(){
+//    return artCollection;
+//    }
 
-    public void setArtCollection(String artCollection){
-    this.artCollection = artCollection;
-    }
+//    public void setArtCollection(String artCollection){
+//    this.artCollection = artCollection;
+//    }
 
+
+//    public void addArtwork (Artwork artwork){
+//        this.artwork.add(artwork);
+//    }
+//
+//    public ArrayList<Artwork> getArtwork(){
+//        return this.artwork;
+//    }
+//
 
 
 

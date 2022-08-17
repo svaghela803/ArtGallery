@@ -1,13 +1,11 @@
 import java.util.ArrayList;
+import Package.Artwork
 
 public class Main {
 
     public static void main(String[] args) {
 
-        ArrayList<String> artCollection = new ArrayList<>();
-
-        artCollection.add("")
-
+        Artwork artwork = new Artwork("Mona Lisa", "Da Vinci", 100, 2));
 
 
     }

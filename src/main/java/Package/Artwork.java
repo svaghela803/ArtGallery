@@ -8,7 +8,9 @@ double price;
 int nft;
 
 
-public String Artwork(String title, String artist, double price, int nft) {
+
+
+public Artwork(String title, String artist, double price, int nft) {
     this.title = title;
     this.artist = artist;
     this.price = price;
