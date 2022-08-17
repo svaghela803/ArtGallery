@@ -13,6 +13,7 @@ public String Artwork(String title, String artist, double price, int nft) {
     this.artist = artist;
     this.price = price;
     this.nft = nft;
+    return title;
 }
 
     public String gettitle() {
