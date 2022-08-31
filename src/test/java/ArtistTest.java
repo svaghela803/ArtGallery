@@ -1,4 +1,5 @@
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.Assert.assertThat;
 
@@ -6,23 +7,18 @@ public class ArtistTest {
 
     import org.junit.jupiter.api.Test;
 
+    Artist artist;
 
-    class MainTest {
+    @BeforeEach
+    public void setUp(){
+        artist = new Artist("Vincent van Gogh");
+    }
 
-        @Test
-        void canprintArtistname() {
-
-//            Given
-            String ArtistName = "DA VINCI"
-
-//          When
-            String actual = ArtistName.toLowerCase();
-
-//            Then
-            String expected = "da vinci";
-            assertThat(actual).isEqualTo(expected);
-
-
-        }
+    @Test
+    public void hasName(){
+        assertThat(artist.getName()).isEqualTo("Vincent van Gogh");
     }
 }
+
+    }
+
