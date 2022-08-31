@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class Gallery {
 
-    private ArrayList<Artwork> artwork;
+    private ArrayList<Artwork> stock;
     double till;
     String galleryName;
 
 
-    public Gallery(double till, String galleryName){
+    public Gallery(String galleryName){
         this.till = 0;
         this.galleryName = galleryName;
-        this.artwork = new ArrayList<Artwork>();
+        this.stock = new ArrayList<Artwork>();
     }
 
     public void sellArtwork(Customer customer, Artwork artwork){
@@ -22,6 +22,7 @@ public class Gallery {
             setTill(this.till + artwork.getPrice());
         }
     }
+
 
     public int artworkCount(){
         return this.stock.size();
@@ -43,15 +44,15 @@ public class Gallery {
 
 //    Getters and setters
 
-    public double gettill(){
+    public double getTill(){
         return till;
     }
 
-    public void settill(double till){
+    public void setTill(double till){
         this.till = till;
     }
 
-    public String getgalleryName(String galleryName){
+    public String getGalleryName(String galleryName){
         return galleryName;
     }
 
