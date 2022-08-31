@@ -15,6 +15,34 @@ public class Gallery {
         this.artwork = new ArrayList<Artwork>();
     }
 
+    public void sellArtwork(Customer customer, Artwork artwork){
+        if(customer.canBuy(artwork) == true){
+            customer.buyArtwork(artwork);
+            this.stock.remove(artwork);
+            setTill(this.till + artwork.getPrice());
+        }
+    }
+
+    public int artworkCount(){
+        return this.stock.size();
+    }
+
+    public void addArtwork(Artwork artwork){
+        this.stock.add(artwork);
+    }
+
+
+
+    public double calculateArtworkValue(){
+        double total = 0;
+        for(Artwork artwork : this.stock){
+            total += artwork.getPrice();
+        }
+        return total;
+    }
+
+//    Getters and setters
+
     public double gettill(){
         return till;
     }
@@ -31,23 +59,10 @@ public class Gallery {
     this.galleryName = galleryName;
     }
 
-//    public  getArtCollection(){
-//    return artCollection;
-//    }
+    public void payGallery(){
 
-//    public void setArtCollection(String artCollection){
-//    this.artCollection = artCollection;
-//    }
+    }
 
-
-//    public void addArtwork (Artwork artwork){
-//        this.artwork.add(artwork);
-//    }
-//
-//    public ArrayList<Artwork> getArtwork(){
-//        return this.artwork;
-//    }
-//
 
 
 
